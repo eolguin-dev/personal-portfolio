@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    color: #edf2f4;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+p {
+    font-size: 2vmax;
+}
+
+h1{
+    font-size: 5vmax;
+}
+
+body {
+    background-color: #2b2d42;
+    height: 100%;
+}
+
+/* --- Header --- */
+
+li, a {
+    font-size: 1em;
+    text-decoration: none;  
+}
+
+a {
+    position: relative;
+}
+  
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em .8em 1.5em;
+    background-color:#2b2d42;
+}
+
+.logo h1{
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    transition: all 0.7s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #ef233c;
+}
+
+.nav-links li a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ef233c;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::before {
+    transform: scaleX(1);
+}
+
+.box {
+    display: none;
+    cursor: pointer;
+}
+
+.box div{
+    width: 25px;
+    height: 3px;
+    background-color: #d90429;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+/* --- mobile device menu --- */
+@media screen and (max-width:426px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: #2b2d42;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 54px;   
+        align-items: center;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+        font-size: 3vmax;
+        z-index: 3;
+    }
+    .nav-links li {
+        opacity: 1;
+        padding: 2em;
+        cursor: pointer;
+    }
+
+    .box {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(-84%);
+    }
+}
+
+@keyframes NavLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+    background-color: #d90429;
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+    background-color: #d90429;
+}
+
+/* --- Home --- */
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.hero-tittle h1 {
+    padding: 5vmax;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 4vmax;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient( 45deg, #8d99ae, #d90429);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-paragraph p{
+    padding: 1.5em;
+    max-width: 90vw;
+    font-size: 2vmax;
+}
+
+.button {
+    background-color: #d90429;
+    border-color: #d90429;
+    border-radius: 0.5em;
+    padding: 1em 3em;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #1A1A1D;
+}
+#contact-me {
+    padding-top: 3vmax;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* --- Footer --- */
+
+.footer .container {
+    margin: 3em 0em 0em;
+}
+
+.copyright-footer {
+    font-size: 0.8em;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-icons i{
+    font-size: 1.5rem;
+}
+
+.social-media-icons li {
+    padding: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+    width: 2rem;
+    text-align: left;
+}
+
+.social-media-icons i:hover {
+    color: #ffc107af;
+}
