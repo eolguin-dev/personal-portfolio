@@ -17,7 +17,7 @@ p {
 }
 
 body {
-    background-color: #2b2d42;
+    background-color: #191a26;
     height: 100%;
 }
 
@@ -37,7 +37,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2vmax;
-    background-color:#2b2d42;
+    background-color: #191a26;
 }
 
 .logo h1{
@@ -88,7 +88,7 @@ header {
 .box div{
     width: 25px;
     height: 3px;
-    background-color: #d90429;
+    background-color: #2b2d42;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -100,11 +100,12 @@ header {
     .nav-links {
         display: flex;
         flex-direction: column;
-        background-color: #2b2d42;
+        background-color: #191a26;
+        opacity: 95%;
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 80px;   
+        top: 72px;   
         align-items: center;
         transform: translate(100%);
         transition: transform 0.5s ease-in;
@@ -122,7 +123,7 @@ header {
     }
 
     .nav-active {
-        transform: translateX(-87%);
+        transform: translateX(-87.2%);
     }
 }
 
@@ -156,20 +157,43 @@ header {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 1em;
 }
 
+/* .hero {
+    background-image: url("/img/pawel-czerwinski-NTYYL9Eb9y8-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+} 
+
+#home-container {
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    height: 100vh;
+    width: 100vw;
+} */
+
+.hero-tittle {
+    background-image: url("/img/pawel-czerwinski-NTYYL9Eb9y8-unsplash.jpg");
+    box-shadow: 0px -60px 35px -10px #191a26 inset;
+}
 .hero-tittle h1 {
-    font-size: 5vmax;
-    padding: 5vmax;
+    text-align: center;
+    padding: 8vmax 3vmax 11vmax 3vmax;
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
     font-size: 4vmax;
     text-transform: uppercase;
-    background: -webkit-linear-gradient( 45deg, #8d99ae, #d90429);
+    background: -webkit-linear-gradient( -65deg, #5289e8, #d90429);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.hero-paragraph {
+    background-color: #191a26;
+    padding: 1em 1em 3em 1em;
 }
 
 .hero-paragraph p{
@@ -177,8 +201,7 @@ header {
     color: #2b2d42;
     border-radius: 1em;
     padding: 1.5em;
-    max-width: 90vw;
-    font-size: 2vmax;
+    margin: 1em;
 }
 
 .button {
@@ -198,7 +221,8 @@ header {
     border-color: #d90429;
 }
 #contact-me {
-    padding-top: 6vmax;
+    background-color: #2b2d42;
+    padding: 6vmax 0 6vmax 0;
     display: flex;
     justify-content: center;
 }
@@ -206,11 +230,12 @@ header {
 /* --- Footer --- */
 
 #footer-container {
-    padding-top: 3em;
+    padding: 3em;
 }
 
 #footer-container span {
-    font-size: 1vmax;
+    font-size: .7em;
+    opacity: 30%;
 }
 
 .social-media-icons {
@@ -234,17 +259,68 @@ header {
 
 .description h1{
     font-size: 3vmax;
-    font-weight: 600;
-    padding: 3vmax 1vmax 3vmax 1vmax;
+    font-weight: 900;
+    padding: 3vmax 1vmax;
+    margin: 3vmax 1vmax;
+    text-transform: uppercase;
 }
 
 .description p {
-    padding: 2vmax;
-    background-color: #edf2f4;
+    padding: 1.5em;
+    margin: 1em;
     color: #2b2d42;
+    background-color: #edf2f4;
     border-radius: 1em;
 }
 
 .description h2{
     padding: 1.5vmax;
+}
+
+/* --- Contact Page --- */
+
+#contact-container {
+    background-color: #2b2d42;
+    margin: 3vmax 0;
+    padding: 3vmax 0;
+}
+
+.contact-card {
+    background: -webkit-linear-gradient( 65deg, #5289e8, #d90429);
+    width: 90%;
+    padding: 0 2vmax;
+    border-radius: 1em;
+}
+
+.contact-tittle h2 {
+    text-transform: uppercase;
+    padding: 2vmax;
+    margin-top: 2vmax;
+}
+
+.form {
+    padding: 2vmax;
+}
+
+.form label {
+    font-size: 1.25em;
+}
+
+.form input {
+    height: 4vh;
+    width: 70vw;
+}
+
+.form textarea {
+    height: 10vh;
+    width: 70vw;
+}
+
+.form-button {
+    padding: 2vmax;
+}
+
+.form-button input {
+    background-color: #191a26;
+    border-color: #191a26;
 }
