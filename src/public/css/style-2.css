@@ -177,14 +177,20 @@ header {
 
 .hero-tittle {
     background-image: url("/img/pawel-czerwinski-NTYYL9Eb9y8-unsplash.jpg");
+    height: 92vh;
+    width: 100vw;
     box-shadow: 0px -60px 35px -10px #191a26 inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hero-tittle h1 {
     text-align: center;
-    padding: 8vmax 3vmax 11vmax 3vmax;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
-    font-size: 4vmax;
+    font-size: 5vmax;
     text-transform: uppercase;
     background: -webkit-linear-gradient( -65deg, #5289e8, #d90429);
     background-clip: text;
@@ -222,9 +228,10 @@ header {
 }
 #contact-me {
     background-color: #2b2d42;
-    padding: 6vmax 0 6vmax 0;
+    padding: 12vmax 0;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
+    box-shadow: 0px 0px 35px 10px #191a26 inset;
 }
 
 /* --- Footer --- */
@@ -277,16 +284,40 @@ header {
     padding: 1.5vmax;
 }
 
+/* --- About Page --- */
+
+.about-tittle h1 {
+    font-size: 3vmax;
+    font-weight: 900;
+    padding: 3vmax 1vmax;
+    margin: 3vmax 1vmax;
+    text-transform: uppercase;
+}
+
+.about-paragraph {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first-paragraph {
+    padding: 2vmax;
+}
+
+.second-paragraph {
+    padding: 2vmax;
+}
+
 /* --- Contact Page --- */
 
 #contact-container {
     background-color: #2b2d42;
     margin: 3vmax 0;
-    padding: 3vmax 0;
+    padding: 12vmax 1vmax;
+    box-shadow: 0px 0px 35px 10px #191a26 inset;
 }
 
 .contact-card {
-    background: -webkit-linear-gradient( 65deg, #5289e8, #d90429);
+    background: -webkit-linear-gradient( -55deg, #031028, #d90429);
     width: 90%;
     padding: 0 2vmax;
     border-radius: 1em;
