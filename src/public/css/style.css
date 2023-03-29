@@ -181,7 +181,7 @@ header {
     background-image: url("/img/milad-fakurian-seA-FPPXL-M-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 100vw;
     height: 100vh;
     backdrop-filter: blur(50px);
