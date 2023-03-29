@@ -21,7 +21,7 @@ body {
 .container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -163,19 +163,21 @@ header {
     text-transform: uppercase;
 }
 
-
-
-/* --- Projects --- */
-
-/*.about {
-    background-image: url("/img/nathan-anderson-9o-VrJSwGuw-unsplash.jpg");
+#contact-me {
+    background-image: url("/img/jeremy-perkins-UgNjyPkphtU-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    box-shadow: inset 0px 0px 100px 100px #000;
-}*/
+}
+
+#contact-me button {
+    padding: 0;
+    margin: 10em 5em;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: translateY(8%);
+}
 
 /* --- mobile device configuration --- */
 
@@ -243,10 +245,6 @@ header {
         width: 90vw;
         padding: 3.5em 1.5em;
     }
-
-    #contact-me {
-        margin: 10em 0;
-    }
 }
 
 @keyframes NavLinkFade {
@@ -273,10 +271,6 @@ header {
     background-color: #ee930b;
     opacity: 0.8;
 }
-
-/* --- Home --- */
-
-
 
 /* --- Services Page --- */
 
