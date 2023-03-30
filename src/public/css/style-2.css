@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 *{
@@ -12,7 +11,7 @@
 }
 
 body {
-    background: linear-gradient(#000 85%, #ee930b);
+    background: linear-gradient(#000 95%, #ee930b);
     height: 100%;
 }
 
@@ -21,7 +20,7 @@ body {
 .container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -33,17 +32,8 @@ body {
     padding: 1em;
 }
 
-.paragraph {
-    font-size: 1.1875em;
-}
-
-.paragraph h2{
-    padding: 1em;
-}
-
 .paragraph p{
-    margin: 1em;
-    padding: 1em;
+    font-size: 1.1875em;
 }
 
 /* --- Header --- */
@@ -80,27 +70,11 @@ header {
     padding: 0px 20px;
     text-transform: uppercase;
     opacity: 0.4;
-}
-
-.nav-links li a {
     transition: all 0.7s ease 0s;
 }
 
-.nav-links li a:hover {
-    color: #ee930b;
-}
-
-.nav-links li a::before {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #ee930b;
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
+.nav-links li:hover {
+    opacity: 1;
 }
 
 .nav-links li a:hover::before {
@@ -123,8 +97,12 @@ header {
 
 /* --- Hero --- */
 
+#hero-container {
+    justify-content: space-around;
+}
+
 #hero-picture {
-    background-image: url("/img/daniel-olah-UpatVsW2kcg-unsplash (1).jpg");
+    background-image: url("/img/daniel-olah-UpatVsW2kcg-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
@@ -133,10 +111,9 @@ header {
 
 #hero-tittle h1 {
     text-align: right;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
     font-weight: 900;
     font-size: 5vmax;
+    padding: 0.5em;
     background: -webkit-linear-gradient( -65deg, #5289e8 20%, #d90429);
     background-clip: text;
     -webkit-background-clip: text;
@@ -151,9 +128,17 @@ header {
     padding: 1.5em;
 }
 
-.button {
+#hero-paragraph {
+    transition: .7s ease-in-out;
+}
+
+#hero-paragraph:hover {
+    transform: scale(1.05);
+}
+
+#button-hero {
     background-color: #000;
-    border-color: #ee930b;
+    border-color: rgb(238, 147, 11, 0.8);
     border-radius: 2em;
     padding: 1em 3em;
     text-decoration: none;
@@ -161,6 +146,12 @@ header {
     font-size: 1.2em;
     cursor: pointer;
     text-transform: uppercase;
+    transition: .7s ease-in-out;
+}
+
+#button-hero:hover {
+    background-color: #ee930b;
+    color: #1d1d1f;
 }
 
 #contact-me {
@@ -172,11 +163,80 @@ header {
 
 #contact-me button {
     padding: 0;
-    margin: 10em 5em;
+    margin: 7em 5em;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     transform: translateY(8%);
+}
+
+/* --- Projects --- */
+
+/* --- Contact --- */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 10em 0;
+    padding: 0.5em 2em;
+    background-color: #1d1d1f;
+    border-radius: 2em;
+    transition: .7s ease-in-out;
+  }
+  
+.card:hover {
+    transform: scale(1.05);
+    border: 2px solid #5289e8;
+  }
+
+#card-tittle, #card-paragraph {
+    text-align: center;
+}
+  
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 2em;
+    margin: 1em 0;
+    padding: 1em;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.form textarea{
+    height: 10em;
+}
+
+.input {
+    font-size: 1.05em;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+
+#button-form {
+    display: flex;
+    justify-content: center;
+}
+
+#button-form button{
+    font-size: 1.1875em;
+    width: 10em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin:1em 0 2em 0;
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    transition: .4s ease-in-out;
+    background-color: #303030;
+}
+  
+#button-form button:hover {
+    background: rgb(238, 147, 11, 0.8);
 }
 
 /* --- mobile device configuration --- */
@@ -243,7 +303,16 @@ header {
 
     #hero-paragraph p {
         width: 90vw;
+        margin-top: 2em;
         padding: 3.5em 1.5em;
+    }
+
+    .card {
+        width: 90vw;
+    }
+
+    #name, #email, #msg {
+        width: 75vw;
     }
 }
 
@@ -282,60 +351,6 @@ header {
     border-radius: 1em;
 }
 
-/* --- Contact Page --- */
-
-#contact-container {
-    margin: 3vmax 0;
-    padding: 12vmax 1vmax;
-}
-
-.card {
-    background-image: linear-gradient(45deg, rgb(82, 137, 232, 0.1), rgb(239, 35, 60, 0.8)),
-                      url("/img/milad-fakurian-seA-FPPXL-M-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 90%;
-    height: 100%;
-    padding: 4em 1em;
-    border-radius: 1em;
-}
-
-#contact-tittle {
-    text-transform: uppercase;
-    padding: 2vmax;
-    margin-top: 2vmax;
-}
-
-.form {
-    padding: 2vmax;
-}
-
-.form label {
-    font-size: 1.25em;
-}
-
-.form input {
-    height: 4vh;
-    width: 70vw;
-    border-radius: 1em;
-}
-
-.form textarea {
-    height: 10vh;
-    width: 70vw;
-    border-radius: 1em;
-}
-
-#button-form {
-    padding: 2vmax;
-}
-
-#button-form input {
-    background-color: #000;
-    border-color: #000;
-}
-
 /* --- Footer --- */
 
 #footer-container {
@@ -363,5 +378,5 @@ header {
 }
 
 .social-media-icons i:hover {
-    color: #d90429;
+    color: #1d1d1f;
 }
