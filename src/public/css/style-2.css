@@ -15,6 +15,12 @@ body {
     height: 100%;
 }
 
+main {
+    max-width: 1200px;
+    margin: 0 auto !important; 
+	float: none !important;
+}
+
 /* --- General ---*/
 
 .container {
@@ -32,10 +38,6 @@ body {
     padding: 1em;
 }
 
-.paragraph p{
-    font-size: 1.1875em;
-}
-
 /* --- Header --- */
 
 li, a {
@@ -51,6 +53,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10vh;
     padding: 1em;
     background-color: #1d1d1f;
     border-bottom: 1px solid rgba(237, 242, 244, 0.4);
@@ -98,87 +101,110 @@ header {
 /* --- Hero --- */
 
 #hero-container {
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 90vh;
 }
 
 #hero-picture {
+    grid-column: 1;
+    grid-row: 1 / span 3;
     background-image: url("/img/daniel-olah-UpatVsW2kcg-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100vh;
-    width: 50vw;
+    height: 90vh;
+}
+
+#hero-tittle {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 4em 2em 0 0;
 }
 
 #hero-tittle h1 {
     text-align: right;
     font-weight: 900;
-    font-size: 5vmax;
-    padding: 0.5em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3vw;
+    text-transform: uppercase;
     background: -webkit-linear-gradient( -65deg, #5289e8 20%, #d90429);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#hero-paragraph p{
-    width: 50vw;
-    text-align: center;
-    border-radius: 2em;
-    background-color: #1d1d1f;
-    padding: 1.5em;
+.arrow {
+    display: none;
 }
 
 #hero-paragraph {
-    transition: .7s ease-in-out;
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0 2em;
 }
 
-#hero-paragraph:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-#button-hero {
-    background-color: #000;
-    border-color: rgb(238, 147, 11, 0.8);
+#hero-paragraph p{
+    text-align: center;
     border-radius: 2em;
-    padding: 1em 3em;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2em;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: .7s ease-in-out;
-}
-
-#button-hero:hover {
-    background-color: #ee930b;
-    color: #1d1d1f;
+    background-color: #1d1d1f;
+    padding: 1em;
 }
 
 #contact-me {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    padding: 3em;
     background-image: url("/img/jeremy-perkins-UgNjyPkphtU-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 55%;
 }
 
 #contact-me button {
     padding: 0;
-    margin: 7em 5em;
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    transform: translateY(8%);
+    background-color: rgb(0, 0, 0, 0);
+    border-color: rgb(238, 147, 11);
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transform: translateY(6px);
+    transition: .7s ease-in-out;
+}
+
+#contact-me button:hover {
+    background-color: rgb(238, 147, 11, 0.5);
+    color: #1d1d1f;
 }
 
 /* --- Services --- */
+
+.services {
+    margin: 4em 0;
+}
 
 #services-paragraph {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
-    padding: 0 4em;
+    gap: 2em;
+    padding: 2em;
     background-color: blueviolet;
+}
+
+.a, .b, .c, .d {
+    color: #f5f5f7;
+    background-color: #151516;
+    padding: 1.5em;
+    border-radius: 1em;
 }
 
 .a {
@@ -223,12 +249,16 @@ header {
 
 /* --- Contact --- */
 
+.contact {
+    margin: 8em 0;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    margin: 10em 0;
     padding: 0.5em 2em;
+    max-width: 500px;
     background-color: #1d1d1f;
     border-radius: 2em;
     transition: .7s ease-in-out;
@@ -299,18 +329,46 @@ header {
     width: 100vw;
 }
 
+/* --- Footer --- */
 
+#footer-container {
+    padding: 3em;
+}
 
-@media (max-width:1200px) {
-    .arrow {
-        display: none;
-    }
+#footer-container span {
+    font-size: .7em;
+    opacity: 30%;
+}
 
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-icons i{
+    font-size: 1.5rem;
+}
+
+.social-media-icons li {
+    padding-left: 5vmax;
+    list-style: none;
+    text-decoration: none;
+}
+
+.social-media-icons i:hover {
+    color: #1d1d1f;
+}
+
+/* --- Responsive for 1024px lower --- */ 
+
+@media (max-width:1024px) {
+    
     #services-paragraph {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: repeat(2, 1fr);
-        padding: 0;
+        gap: 2em;
+        padding: 2em;
         background-color: #d90429;
     }
 
@@ -339,9 +397,9 @@ header {
     }
 }
 
-/* --- mobile device configuration --- */
+/* --- Responsive for 768px lower --- */
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
     body{
         overflow-x: hidden;
     }
@@ -382,18 +440,30 @@ header {
         transform: translateX(-87.2%);
     }
 
+    /* --- Hero --- */
+
+    #hero-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 150vh;
+    }
+
     #hero-picture {
-        height: 50vh;
         width: 100vw;
     }
 
     #hero-tittle {
-        height: 50vh;
         width: 100vw;
+        padding: 2em;
+    }
+
+    #hero-tittle h1 {
+        font-size: 4.2vh;
     }
 
     .arrow {
-        margin: 2em 0 0em 0;
+        display: none;
         width: 0; 
         height: 0; 
         border-left: 20px solid transparent;
@@ -447,44 +517,4 @@ header {
     transform: rotate(45deg) translate(-5px,-6px);
     background-color: #ee930b;
     opacity: 0.8;
-}
-
-/* --- Services Page --- */
-
-#services-paragraph div {
-    color: #f5f5f7;
-    background-color: #151516;
-    padding: 1.5em;
-    margin: 1em;
-    border-radius: 1em;
-}
-
-/* --- Footer --- */
-
-#footer-container {
-    padding: 3em;
-}
-
-#footer-container span {
-    font-size: .7em;
-    opacity: 30%;
-}
-
-.social-media-icons {
-    display: flex;
-    flex-direction: row;
-}
-
-.social-media-icons i{
-    font-size: 1.5rem;
-}
-
-.social-media-icons li {
-    padding-left: 5vmax;
-    list-style: none;
-    text-decoration: none;
-}
-
-.social-media-icons i:hover {
-    color: #1d1d1f;
 }
