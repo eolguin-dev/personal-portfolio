@@ -5,13 +5,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #edf2f4;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    color: #D7995D;
+    font: 400 100% "Roboto", sans-serif;
 }
 
 body {
-    background: linear-gradient(#000 95%, #ee930b);
+    background: linear-gradient(#000 95%, #63486F);
     height: 100%;
 }
 
@@ -31,37 +30,45 @@ main {
 }
 
 .tittle h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2em;
-    font-weight: bolder;
+    font: bolder 200% "Orbitron", sans-serif;
     text-transform: uppercase;
     padding: 1em;
+    color: #D7995D;
 }
 
 /* --- Header --- */
 
 li, a {
-    font-size: 0.8em;
+    font-size: 80%;
     text-decoration: none;  
 }
 
 a {
     position: relative;
+    color: antiquewhite;
 }
   
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    padding: 1em;
     background-color: #1d1d1f;
     border-bottom: 1px solid rgba(237, 242, 244, 0.4);
 }
 
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 2em;
+    max-width: 1200px;
+    margin: 0 auto !important; 
+	float: none !important;
+}
+
 .logo h1{
+    font-size: 200%;
     cursor: pointer;
     opacity: 0.4;
+    color: antiquewhite;
 }
 
 .nav-links {
@@ -70,7 +77,7 @@ header {
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding-left: 4em;
     text-transform: uppercase;
     opacity: 0.4;
     transition: all 0.7s ease 0s;
@@ -78,10 +85,6 @@ header {
 
 .nav-links li:hover {
     opacity: 1;
-}
-
-.nav-links li a:hover::before {
-    transform: scaleX(1);
 }
 
 .box {
@@ -103,8 +106,7 @@ header {
 #hero-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    height: 90vh;
+    /*grid-template-rows: repeat(3, 1fr);*/
 }
 
 #hero-picture {
@@ -119,29 +121,23 @@ header {
 #hero-tittle {
     grid-column: 2;
     grid-row: 1;
-    padding: 4em 2em 0 0;
+    padding-right: 2em;
 }
 
 #hero-tittle h1 {
     text-align: right;
-    font-weight: 900;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3vw;
+    font: 900 250% "Orbitron", sans-serif;
     text-transform: uppercase;
-    background: -webkit-linear-gradient( -65deg, #5289e8 20%, #d90429);
+    background: -webkit-linear-gradient( -65deg, #011E65 10%, #D7995D, #CB6E03, #63486F 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.arrow {
-    display: none;
-}
-
 #hero-paragraph {
     grid-column: 2;
     grid-row: 2;
-    padding: 0 2em;
+    padding-right: 2em;
 }
 
 #hero-paragraph p{
@@ -149,6 +145,12 @@ header {
     border-radius: 2em;
     background-color: #1d1d1f;
     padding: 1em;
+    transition: .7s ease-in-out;
+}
+
+
+#hero-paragraph p:hover{
+    transform: scale(1.05);
 }
 
 #contact-me {
@@ -156,11 +158,11 @@ header {
     grid-row: 3;
     display: flex;
     justify-content: center;
-    padding: 3em;
+    padding: 1em;
     background-image: url("/img/jeremy-perkins-UgNjyPkphtU-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 55%;
+    background-size: 300px;
 }
 
 #contact-me button {
@@ -168,12 +170,12 @@ header {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background-color: rgb(0, 0, 0, 0);
-    border-color: rgb(238, 147, 11);
+    background-color: rgba(0, 0, 0, 0);
+    /*border-color: rgb(238, 147, 11);*/
     text-decoration: none;
     border: none;
     display: inline-block;
-    font-size: 1.2em;
+    font-size: 120%;
     cursor: pointer;
     text-transform: uppercase;
     transform: translateY(6px);
@@ -182,13 +184,17 @@ header {
 
 #contact-me button:hover {
     background-color: rgb(238, 147, 11, 0.5);
-    color: #1d1d1f;
+    /*color: #1d1d1f;*/
 }
 
 /* --- Services --- */
 
 .services {
-    margin: 4em 0;
+    margin-top: 10em;
+}
+
+.paragraph h2 {
+    font-size: 150%;
 }
 
 #services-paragraph {
@@ -196,13 +202,12 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 2em;
-    padding: 2em;
-    background-color: blueviolet;
+    padding: 1.5em;
 }
 
 .a, .b, .c, .d {
     color: #f5f5f7;
-    background-color: #151516;
+    background-color: #1d1d1f;
     padding: 1.5em;
     border-radius: 1em;
 }
@@ -211,6 +216,11 @@ header {
     grid-column: 1;
     grid-row: 1 / 3;
     transition: .7s ease-in-out;
+    background: -webkit-linear-gradient( 120deg, #1d1d1f 20%, #63486F);
+    /*background-image: url("/img/vincent-guth-62V7ntlKgL8-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
 }
 
 .a:hover {
@@ -221,6 +231,7 @@ header {
     grid-column: 2 / span 2;
     grid-row: 1;
     transition: .7s ease-in-out;
+    background: -webkit-linear-gradient( 300deg, #63486F, #1d1d1f , #1d1d1f, #1d1d1f, #1d1d1f, #63486F);
 }
 
 .b:hover {
@@ -241,6 +252,7 @@ header {
     grid-column: 3;
     grid-row: 2;
     transition: .7s ease-in-out;
+    background: -webkit-linear-gradient( 300deg, #1d1d1f 10%, #63486F);
 }
 
 .d:hover {
@@ -250,7 +262,7 @@ header {
 /* --- Contact --- */
 
 .contact {
-    margin: 8em 0;
+    margin-top: 10em;
 }
 
 .card {
@@ -266,7 +278,7 @@ header {
   
 .card:hover {
     transform: scale(1.05);
-    border: 2px solid #5289e8;
+    border: 2px solid #D7995D;
 }
 
 #card-tittle h1{
@@ -319,7 +331,7 @@ header {
 }
   
 #button-form button:hover {
-    background: rgb(238, 147, 11, 0.8);
+    background: #63486F;
 }
 
 /* --- About Page --- */
@@ -330,6 +342,10 @@ header {
 }
 
 /* --- Footer --- */
+
+.footer {
+    margin-top: 10em;
+}
 
 #footer-container {
     padding: 3em;
@@ -367,9 +383,6 @@ header {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: repeat(2, 1fr);
-        gap: 2em;
-        padding: 2em;
-        background-color: #d90429;
     }
 
     .a {
@@ -391,10 +404,6 @@ header {
         grid-column: 2;
         grid-row: 2;
     }
-
-    .card {
-        width: 90vw;
-    }
 }
 
 /* --- Responsive for 768px lower --- */
@@ -402,6 +411,10 @@ header {
 @media screen and (max-width:768px) {
     body{
         overflow-x: hidden;
+    }
+
+    p {
+        font-size: 1.25em;
     }
 
     .nav-links {
@@ -413,7 +426,7 @@ header {
         width: 100vw;
         height: 100vh;
         position: absolute;
-        top: 72px;   
+        top: 10vh;   
         align-items: center;
         transform: translate(100%);
         transition: transform 0.5s ease-in;
@@ -425,50 +438,47 @@ header {
         opacity: 1;
         padding: 3.5em;
         cursor: pointer;
+        margin: 4em 0;
     }
 
     .nav-links a {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 4vmax;
-    }
+        font: 150% "Orbitron", sans-serif;
+        }
 
     .box {
         display: block;
     }
 
     .nav-active {
-        transform: translateX(-87.2%);
+        transform: translateX(-85%);
     }
 
     /* --- Hero --- */
 
     #hero-container {
         display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: 150vh;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 200vh;
     }
 
     #hero-picture {
         width: 100vw;
+        height: 40vh;
     }
 
     #hero-tittle {
         width: 100vw;
-        padding: 2em;
+        padding: 0 2em;
     }
 
     #hero-tittle h1 {
         font-size: 4.2vh;
     }
 
-    .arrow {
-        display: none;
-        width: 0; 
-        height: 0; 
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-top: 30px solid #1d1d1f;
+    #hero-paragraph {
+        padding: 0;
     }
 
     #hero-paragraph p {
@@ -477,12 +487,11 @@ header {
         padding: 3.5em 1.5em;
     }
 
+    /* --- Services --- */
+
     #services-paragraph {
         display: flex;
         flex-direction: column;
-        margin: 0;
-        padding: 0.5em 2em;
-        background-color: greenyellow;
     }
 
     .card {
@@ -497,7 +506,7 @@ header {
 @keyframes NavLinkFade {
     from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(0px);
     }
     to {
         opacity: 1;
