@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #D7995D;
+    color: antiquewhite;
     font: 400 100% "Roboto", sans-serif;
 }
 
@@ -45,7 +45,6 @@ li, a {
 
 a {
     position: relative;
-    color: antiquewhite;
 }
   
 header {
@@ -68,7 +67,6 @@ header {
     font-size: 200%;
     cursor: pointer;
     opacity: 0.4;
-    color: antiquewhite;
 }
 
 .nav-links {
@@ -126,9 +124,9 @@ header {
 
 #hero-tittle h1 {
     text-align: right;
-    font: 900 250% "Orbitron", sans-serif;
+    font: 900 275% "Orbitron", sans-serif;
     text-transform: uppercase;
-    background: -webkit-linear-gradient( -65deg, #011E65 10%, #D7995D, #CB6E03, #63486F 90%);
+    background: -webkit-linear-gradient( 220deg, #011E65, #63486F, #D7995D 40%, #CB6E03 80%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -144,6 +142,7 @@ header {
     text-align: center;
     border-radius: 2em;
     background-color: #1d1d1f;
+    color: antiquewhite;
     padding: 1em;
     transition: .7s ease-in-out;
 }
@@ -162,6 +161,7 @@ header {
     background-image: url("/img/jeremy-perkins-UgNjyPkphtU-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    filter: sepia(50%);
     background-size: 300px;
 }
 
@@ -183,7 +183,7 @@ header {
 }
 
 #contact-me button:hover {
-    background-color: rgb(238, 147, 11, 0.5);
+    background-color: #d7995d80;
     /*color: #1d1d1f;*/
 }
 
@@ -195,6 +195,11 @@ header {
 
 .paragraph h2 {
     font-size: 150%;
+    /*background: -webkit-linear-gradient( 225deg, #D7995D, antiquewhite, #D7995D 95%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    font-weight: 500;
 }
 
 #services-paragraph {
@@ -216,7 +221,7 @@ header {
     grid-column: 1;
     grid-row: 1 / 3;
     transition: .7s ease-in-out;
-    background: -webkit-linear-gradient( 120deg, #1d1d1f 20%, #63486F);
+    background: -webkit-linear-gradient( 300deg, #63486F, #1d1d1f 65%);
     /*background-image: url("/img/vincent-guth-62V7ntlKgL8-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -225,6 +230,10 @@ header {
 
 .a:hover {
     transform: scale(1.05);
+}
+
+.a h2 {
+    color: antiquewhite;
 }
 
 .b {
@@ -238,6 +247,13 @@ header {
     transform: scale(1.05);
 }
 
+.b h2 {
+    background: -webkit-linear-gradient( 0deg, antiquewhite, #D7995D 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+
 .c {
     grid-column: 2 ;
     grid-row: 2 ;
@@ -246,6 +262,10 @@ header {
 
 .c:hover {
     transform: scale(1.05);
+}
+
+.c h2 {
+    color: #D7995D;
 }
 
 .d {
@@ -257,6 +277,13 @@ header {
 
 .d:hover {
     transform: scale(1.05);
+}
+
+.d h2 {
+    background: -webkit-linear-gradient( 0deg, #D7995D, antiquewhite 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
 
 /* --- Contact --- */
@@ -331,14 +358,33 @@ header {
 }
   
 #button-form button:hover {
-    background: #63486F;
+    background: #D7995D;
 }
 
 /* --- About Page --- */
 
-.about {
-    height: 100vh;
-    width: 100vw;
+#about-paragraph {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 2em;
+}
+
+#first-paragraph p {
+    background-color: #1d1d1f;
+    padding: 1em;
+    border-radius: 2em;
+
+}
+
+#second-paragraph {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    background-image: url("/img/20230304_180111.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: grayscale(50%);
 }
 
 /* --- Footer --- */
@@ -354,6 +400,7 @@ header {
 #footer-container span {
     font-size: .7em;
     opacity: 30%;
+    color: #D7995D;
 }
 
 .social-media-icons {
@@ -363,6 +410,8 @@ header {
 
 .social-media-icons i{
     font-size: 1.5rem;
+    color: #D7995D;
+    transition: .7s ease-in-out;
 }
 
 .social-media-icons li {
@@ -372,7 +421,8 @@ header {
 }
 
 .social-media-icons i:hover {
-    color: #1d1d1f;
+    color: antiquewhite;
+    transform: scale(1.4);
 }
 
 /* --- Responsive for 1024px lower --- */ 
@@ -475,6 +525,10 @@ header {
 
     #hero-tittle h1 {
         font-size: 4.2vh;
+        background: -webkit-linear-gradient( 130deg, #011E65, #63486F, #D7995D 40%, #CB6E03 80%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     #hero-paragraph {
@@ -516,7 +570,7 @@ header {
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px,6px);
-    background-color: #ee930b;
+    background-color: #CB6E03;
     opacity: 0.8;
 }
 .toggle .line2 {
@@ -524,6 +578,6 @@ header {
 }
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
-    background-color: #ee930b;
+    background-color: #CB6E03;
     opacity: 0.8;
 }
