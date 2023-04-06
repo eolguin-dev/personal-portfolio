@@ -18,7 +18,7 @@
         <div class="container" id="hero-container">
             <div id="hero-picture"></div>
             <div  id="hero-tittle">
-                <h1>Solving complex problems through engineering</h1>
+                <h1>Solving <br> complex problems <br> through engineering</h1>
             </div>
             <div class="paragraph" id="hero-paragraph">
                 <p>
@@ -30,14 +30,14 @@
                 </p>
             </div>
             <div id="contact-me">
-                <button class="button" id="button-hero"><a href=""> Let's <br> connect! </a></button>
+                <button class="button" id="button-hero"><a href=""> Let's connect! </a></button>
             </div>
         </div>
     </section>
 
     <section class="services">
-        <div class="container">
-            <div class="tittle">
+        <div class="container" id="services-container">
+            <div class="tittle" id="services-tittle">
                 <h1>Services</h1>
             </div>
             <div class="paragraph" id="services-paragraph">
@@ -80,29 +80,35 @@
     </section>
 
     <section class="contact">
-        <div class="container">
+        <div class="container" id="contact-container">
             <div class="card">
                 <div class="tittle" id="card-tittle">
                     <h1>Contact</h1>
                 </div>
                 <div class="paragraph" id="card-paragraph">
                     <p>
-                    Thank you for your interest in my services!. <br> Please fill out the form & include a brief 
+                    Thank you for your interest in my services!. <br> Fill out the form & include a brief 
                     description of your project. <br> I will get back to you as soon as possible.
                     </p>
                 </div>
                 <form action="" method="get">
                     <div class="form">
+                        <i class="fa-regular fa-user"></i>
                         <input autocomplete="off" placeholder="Name" type="text" name="name" class="input" required!>
                     </div>
                     <div class="form">
+                        <i class="fa-regular fa-at"></i>
                         <input autocomplete="off" placeholder="E-mail" type="email" name="email" class="input" required!>
                     </div>
                     <div class="form">
+                        <i class="fa-regular fa-comment"></i>
                         <textarea placeholder="Message" name="user_message" class="input" required!></textarea>
                     </div>
                     <div id="button-form">
-                        <button class="button" type="submit" value="Send it!"><a> Send it! </a></button>
+                        <button class="button" type="submit" value="Send it!">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <a>Send it!</a>
+                        </button>
                     </div>
                 </form>
             </div>
