@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src",
+    "watch": "nodemon --ext *",
     "dev": "node src"
   },
   "keywords": [],
@@ -16,6 +17,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^2.0.22"
   }
 }

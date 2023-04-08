@@ -328,7 +328,7 @@ header {
 #about-tittle {
     grid-column: 1;
     grid-row: 2;
-    transform: translateX(20%);
+    transform: translate3d(11%, 40%, 0);
 }
 
 #about-tittle h1 {
@@ -358,7 +358,7 @@ header {
     transform: translate3d(13px, 10px, 0);
 }
 
-#about-paragraph {
+#ap1 {
     grid-column: 2;
     grid-row: 4;
     margin-top: 0.5em;
@@ -376,13 +376,39 @@ header {
     margin-top: 2em;
 }
 
-#p2 {
-    grid-column: 4;
-    grid-row: 3;
+#canada, #location {
+    color: #db0622bf;
 }
 
-#p2 h2 {
+#ap2 {
+    grid-column: 3;
+    grid-row: 1;
+    padding: 1em;
+}
+
+#ap2 h2 {
     text-transform: uppercase;
+}
+
+#ap3 {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 1em;
+}
+
+#ap3 h2 {
+    text-transform: uppercase;
+}
+
+#skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#skills i {
+    font-size: 2em;
+    padding: 1em;
 }
 
 /* --- Projects --- */
