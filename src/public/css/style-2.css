@@ -159,10 +159,23 @@ header {
     background-color: #d7995d80;
 }
 
+/* --- Home Separation --- */
+
+#home-separation {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    margin-top: 10em;
+    background-color: #000;
+    opacity: 1;
+    background: repeating-linear-gradient( -45deg, #1d1d1f, #1d1d1f 6.5px, #000 6.5px, #000 32.5px );
+    transform: translateX(-9.5%);
+}
+
 /* --- Services --- */
 
 .services {
-    margin-top: 20em;
+    margin-top: 10em;
 }
 
 #services-container {
