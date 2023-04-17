@@ -19,10 +19,6 @@ main, .head, .footer {
 	float: none !important;
 }
 
-footer {
-    background: -webkit-linear-gradient(#000, #63486F);
-}
-
 /* --- Header --- */
 
 li, a {
@@ -340,7 +336,7 @@ header {
 #about-tittle {
     grid-column: 1;
     grid-row: 2;
-    transform: translate3d(25%, -151%, 0);
+    transform: translate3d(80%, -151%, 0) rotate(180deg);
 }
 
 #about-tittle h1 {
@@ -349,16 +345,15 @@ header {
     color: #D7995D;
     position: relative;
     writing-mode: vertical-lr;
-    transform: rotate(180deg);
 }
 
 #about-tittle h1:before {
     content: '';
     position: absolute;
-    height: 150px;
+    height: 190px;
     width: 10px;
     background: #D7995D;
-    transform: translate3d(13px, -160px, 0);
+    transform: translate3d(13px, -203px, 0);
 }
 
 #about-tittle h1:after {
@@ -367,7 +362,7 @@ header {
     height: 250px;
     width: 10px;
     background: #D7995D;
-    transform: translate3d(13px, 10px, 0);
+    transform: translate3d(13px, 11px, 0);
 }
 
 #picture {
@@ -413,6 +408,7 @@ header {
     grid-column: 4;
     grid-row: 2;
     max-width: 300px;
+    margin: 1.5em 1em 0 0;
 }
 
 #ap2 h2 {
@@ -423,10 +419,12 @@ header {
 #ap3 {
     grid-column: 4;
     grid-row: 1;
-    max-width: 200px;
+    max-width: 300px;
+    height: 400px;
     padding: 1em;
     background-color: #1d1d1f;
     border-radius: 20px;
+    margin-right: 1em;
 }
 
 #ap3 h2 {
@@ -437,8 +435,9 @@ header {
 #skills-block {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-top: 1em;
-    
+    height: 300px;
 }
 
 #skills-block i {
@@ -601,6 +600,10 @@ header {
 }
 
 /* --- Footer --- */
+
+footer {
+    background: -webkit-linear-gradient(#000, #63486F);
+}
 
 #footer-container {
     margin-top: 10em;
