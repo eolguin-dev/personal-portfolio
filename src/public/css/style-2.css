@@ -33,7 +33,6 @@ a {
 header {
     background-color: rgb(29, 29, 31, 0.6);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(237, 242, 244, 0.4);
     position: fixed;
     width: 100vw;
@@ -46,6 +45,12 @@ header {
     align-items: center;
     height: 8vh;
     padding: 0 2em;
+}
+
+header::before {
+    content: '';
+    background-color: #63486F;
+    filter: blur(5px);
 }
 
 .logo h1{
@@ -392,94 +397,25 @@ header {
     transform: translate3d(150px, -100px, 0);
 }
 
-#ap1 {
+#about-p1 {
     grid-column: 3;
     grid-row: 1;
-    max-width: 300px;
+    max-width: 325px;
     margin-top: 2em;
 }
-
 
 #canada, #location {
     color: #db0622bf;
 }
 
-#ap2 {
-    grid-column: 4;
-    grid-row: 2;
-    max-width: 300px;
-    margin: 1.5em 1em 0 0;
-}
-
-#ap2 h2 {
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-
-#ap3 {
-    grid-column: 4;
-    grid-row: 1;
-    max-width: 300px;
-    height: 400px;
-    padding: 1em;
-    background-color: #1d1d1f;
-    border-radius: 20px;
-    margin-right: 1em;
-}
-
-#ap3 h2 {
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-
-#skills-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 1em;
-    height: 300px;
-}
-
-#skills-block i {
-    font-size: 1.5em;
-    padding: 0.5em;
-}
-
-.skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.progress { 
-    height: 20px;
-    width: 200px;
-    position: relative;
-    background: #1d1d1f;
-    border-radius: 25px;
-    padding: 4px;
-    box-shadow: inset 2px 0px 10px rgb(5, 5, 5);
-}
-
-.progress > span {
-    display: block;
-    height: 100%;
-    border-radius: 20px ;
-    background-color: #D7995D;
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6), inset 0 -1px 4px rgba(0, 0, 0, 0.6);
-    position: relative;
-    overflow: hidden;
-}
-
-#ap4 {
+#about-p2 {
     grid-column: 3;
     grid-row: 2;
     display: flex;
     margin-top: 4em;
 }
 
-#ap4 h2 {
+#about-p2 h2 {
     font-weight: bolder;
     text-transform: uppercase;
 }
@@ -522,8 +458,71 @@ header {
     text-align: center;
 }
 
-/* --- Radial Progress Bar --- */
+#about-p3 {
+    grid-column: 4;
+    grid-row: 1;
+    max-width: 300px;
+    padding: 1em;
+    background-color: #1d1d1f;
+    border-radius: 20px;
+    margin-right: 1em;
+}
 
+#about-p3 h2 {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#skills-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+#skills-block i {
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.progress { 
+    height: 20px;
+    width: 150px;
+    position: relative;
+    background: #1d1d1f;
+    border-radius: 25px;
+    padding: 4px;
+    box-shadow: inset 2px 0px 10px rgb(5, 5, 5);
+}
+
+.progress > span {
+    display: block;
+    height: 100%;
+    border-radius: 20px ;
+    background-color: #D7995D;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6), inset 0 -1px 4px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+#about-p4 {
+    grid-column: 4;
+    grid-row: 2;
+    max-width: 325px;
+    margin: 1.5em 1em 0 0;
+}
+
+#about-p4 h2 {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
 
 /* --- Projects --- */
 
@@ -685,31 +684,22 @@ footer {
     p {
         font-size: 1.25em;
     }
-
-    header {
-        background-color: rgb(29, 29, 31, 0.6);
-        /*backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);*/
-        border-bottom: 1px solid rgba(237, 242, 244, 0.4);
-        position: fixed;
-        width: 100vw;
-        z-index: 2;
+    
+    .nav-links::before {
+        filter: blur(5px);
     }
 
     .nav-links {
         display: flex;
         flex-direction: column;
-        background-color: rgb(0, 0, 0, 0.95);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(130, 130, 130, 0.5);
         width: 100vw;
-        height: 100vh;
+        height: 92vh;
         position: absolute;
-        top: 10vh;   
+        top: 8vh;
         align-items: center;
         transform: translate(100%);
         transition: transform 0.5s ease-in;
-        font-size: 3vmax;
         z-index: 3;
     }
 
@@ -721,15 +711,15 @@ footer {
     }
 
     .nav-links a {
-        font: 150% "Orbitron", sans-serif;
-        }
+        font: 10vw "Orbitron", sans-serif;
+    }
 
     .box {
         display: block;
     }
 
     .nav-active {
-        transform: translateX(-85%);
+        transform: translateX(-82.6%);
     }
 
     /* --- Hero --- */
@@ -828,14 +818,12 @@ footer {
     /* --- About page --- */
 
     #about-container {
-        grid-template-columns: auto;
-        grid-template-rows: repeat(7,auto);
-        justify-content: center;
-        padding-top:6vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 8vh;
     }
 
     #about-tittle {
-        grid-row: 1;
         transform: rotate(270deg) translate3d(0, 0, 0);
     }
 
@@ -852,34 +840,25 @@ footer {
     }
 
     #picture {
-        grid-column: 1;
-        grid-row: 2;
-        max-width: 400px;
+        width: 325px;
         height: 75vh;
     }
-
-    #ap1 {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    #ap2 {
-        grid-column: 1;
-        grid-row: 5;
-        margin: 0;
-    }
-    
-    #ap3 {
-        grid-column: 1;
-        grid-row: 6;
-        margin: 6em 0 0 0;
-        width: 100vw;
-    }
-    
-    #ap4 {
-        grid-column: 1;
-        grid-row: 4;
+       
+    #about-p2 {
         margin: 4em 0;
+    }
+
+    #about-p3 {
+        margin: 6em 0;
+        width: 325px;
+    }
+
+    #skills-block {
+        height: 300px;
+    }
+
+    #about-p4 {
+        margin: 4em 0 0 0;
     }
 }
 
