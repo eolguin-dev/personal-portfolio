@@ -31,7 +31,7 @@ a {
 }
   
 header {
-    background-color: rgb(29, 29, 31, 0.6);
+    background-color: rgb(29, 29, 31, 0.3);
     backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(237, 242, 244, 0.4);
     position: fixed;
@@ -118,7 +118,7 @@ header::before {
     text-align: right;
     font: 900 225% "Orbitron", sans-serif;
     text-transform: uppercase;
-    background: -webkit-linear-gradient( 0deg, #D7995D 55%, #63486F);
+    background: -webkit-linear-gradient( 0deg, #F3AC6F, #D7995D, #182050);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -133,6 +133,7 @@ header::before {
 #hero-paragraph p{
     text-align: right;
     color: antiquewhite;
+    opacity: 0.75;
 }
 
 #contact-me {
@@ -205,6 +206,10 @@ header::before {
     grid-template-rows: auto auto;
     gap: 2em;
     padding-right: 2em;
+}
+
+#services-paragraph p {
+    opacity: 0.75;
 }
 
 #a, #b, #c, #d {
@@ -601,7 +606,7 @@ header::before {
 /* --- Footer --- */
 
 footer {
-    background: -webkit-linear-gradient(#000, #63486F);
+    background: -webkit-linear-gradient(#000, #182050);
 }
 
 #footer-container {
@@ -743,7 +748,7 @@ footer {
 
     #hero-tittle h1 {
         font-size: 5vh;
-        background: -webkit-linear-gradient( 210deg, #D7995D 20%, #63486F);
+        background: -webkit-linear-gradient( 210deg, #D7995D 20%, #182050);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
