@@ -533,8 +533,8 @@ header::before {
 
 #projects-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: auto 400px 400px 100px;
+    grid-template-rows: repeat(5, 300px);
     gap: 1em;
     padding-top: 8vh;
 }
@@ -573,8 +573,8 @@ header::before {
 }
 
 #pp1 {
-    grid-column: 2 / span 2;
-    grid-row: 1;
+    grid-column: 2;
+    grid-row: 1 / span 2;
     padding: 1em;
     background-color: #d7995d80;
     border-radius: 2em;
@@ -582,8 +582,8 @@ header::before {
 }
 
 #pp2 {
-    grid-column: 3 / span 3;
-    grid-row: 2;
+    grid-column: 3;
+    grid-row: 2 / span 2;
     padding: 1em;
     background-color: #D7995D80;
     border-radius: 2em;
@@ -591,16 +591,12 @@ header::before {
 }
 
 #pp3 {
-    grid-column: 2 / span 2;
-    grid-row: 3;
+    grid-column: 2;
+    grid-row: 3 / span 2;
     padding: 1em;
     background-color: #D7995D80;
     border-radius: 2em;
 
-}
-
-#pp1, #pp2, #pp3 {
-    margin-right: 2em;
 }
 
 /* --- Footer --- */
